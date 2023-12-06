@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: #000;
+        }
+        .container {
+            max-width: 640px;
+            margin: auto;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            /* width: 640px; */
+            height: 80%;
+            /* margin: auto; */
+            background-color: white;
+            padding: 20px;
+        }        .image {
+            padding-top: 50px;
+            display: block;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .wrapper {
+            display: block;
+            width: 100%;
+            color: #000;
+        }
+        .decoration {
+            text-decoration: none;
+        }
+        .magic-link {
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .magic-link {
+            width: auto;
+            margin: 0 10px;
+        }
+        .color-black {
+            color: #000;
+        }
+    </style>
+</head>
+<body style="background-color: #ddd; width: 100%">
+    <div class="container">
+        <%- include('./header.ejs') %>
+            <hr style="margin:0" />
+            <div class="card">
+                <h4 class="color-black"><b>Greetings from Scaffold</b></h4>
+                <h4 class="color-black">Dear <%= firstName %> ,</h4>
+                <p class="color-black">we hope this email finds you well.We have noticed that you
+                    attempted to create an account on our website using the email address <%= email %>
+                        but it appears that there was an issue with the registration process. </p>
+                <div class="wrapper">
+                    <p class="color-black">If you are still interested in creating an account with us ,
+                        we recommend trying again with a different email address . This will ensure that
+                        you are able to access all of the feature and benefits of our website without any further issues
+                    </p>
+                    <p class="color-black">If you have any questions or concerns , please do not hesitate to <a href="#"
+                            target="_blank">support team</a> We apologize for any inconvenience this may have caused and
+                        look forward to the opportunity
+                        to serve you in the future </p>
+                    <p class="color-black">Thank You,</p>
+                    <p class="color-black"><b>Scaffold Team</b></p>
+                </div>
+            </div>
+            <hr style="margin:0" />
+            <%- include('./footer.ejs') %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: #000;
+        }
+        .container {
+            max-width: 640px;
+            margin: auto;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            /* width: 640px; */
+            height: 80%;
+            /* margin: auto; */
+            background-color: white;
+            padding: 20px;
+        }        .image {
+            padding-top: 50px;
+            display: block;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .wrapper {
+            display: block;
+            width: 100%;
+            color: #000;
+        }
+        .decoration {
+            text-decoration: none;
+        }
+        .magic-link {
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .magic-link {
+            width: auto;
+            margin: 0 10px;
+        }
+        .color-black {
+            color: #000;
+        }
+    </style>
+</head>
+<body style="background-color: #ddd; width: 100%">
+    <div class="container">
+        <%- include('./header.ejs') %>
+            <hr style="margin:0" />
+            <div class="card">
+                <h4 class="color-black"><b>Greetings from Scaffold</b></h4>
+                <h4 class="color-black">Dear User,</h4>
+                <p class="color-black">I wanted to personally welcome you to our Scaffold workspace. We're excited to have you join our <%= spaceName %> space and start collaborating with us.</p>
+                <div class="wrapper">
+                    <p class="color-black">As a reminder, you can access our workspace by logging in to your Scaffold account at:</p>
+                        <div class="wrapper text-center">
+                            <a class="decoration" href="<%= link %>">
+                              <button class="magic-link">Accept Invite</button>
+                            </a>
+                          </div>
+                   
+                    <p class="color-black">Once you're logged in, you'll be able to see all of the projects and files that we're working on, and communicate with other members of the team.</p>
+                    <p class="color-black">If you have any questions or need any help getting started, please don't hesitate to reach out to me or anyone else on the team.</p>
+                    <p class="color-black">Thank You,</p>
+                    <p class="color-black">Team Scaffold</p>
+                </div>
+            </div>
+            <hr style="margin:0" />
+            <%- include('./footer.ejs') %>
+    </div>
+</body>
+
+</html>

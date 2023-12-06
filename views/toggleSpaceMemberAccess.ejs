@@ -1,0 +1,60 @@
+<%- include('./header.ejs') %>
+    <!DOCTYPE html>
+    <html>
+    <title>Scaffold</title>
+
+    <head>
+        <style>
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                width: 80%;
+                height: 80%;
+                margin: 0 10%;
+                background-color: white;
+            }
+
+            .image {
+                padding-top: 50px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .text-center {
+                text-align: center;
+                padding: 0px 10px;
+            }
+
+            .wrapper {
+                display: flex;
+                justify-content: center;
+            }
+
+            .magic-link {
+                color: white;
+                background-color: blue;
+                border-radius: 5px;
+                padding: 10px;
+                margin: auto;
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body style="background-color: #ddd; width: 100%">
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaQTw3kGln5qXjCvv_kpQ58piStOsjcMe3nkzir7Cf&s"
+                alt="scaffold_logo" width="50" height="50" class="image">
+            <h1 class="text-center">Scaffold</h1>
+            <div class="content">
+                <h5 class="text-center">Dear
+                    <%= firstName %>,
+                </h5>
+                <h5 class="text-center">status of your subscription on <%= spaceName %> space is enabled: <%= activeStatus %>
+                </h5>
+            </div>
+        </div>
+    </body>
+
+    </html>
+
+    <%- include('./footer.ejs') %>

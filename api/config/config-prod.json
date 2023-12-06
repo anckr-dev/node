@@ -1,0 +1,46 @@
+{
+    "name": "Configuration",
+    "project": "scaffold",
+    "settings": {
+        "apiVersion": "/api/V1",
+        "port": 3000,
+        "statusCode": {
+            "success": {
+              "ok": 200
+            },
+            "clientError": {
+              "badRequest": 400,
+              "unAuthorized": 401,
+              "NotFound": 404,
+              "tokenExpired": 419,
+              "Forbidden": 403,
+              "InValidInput": 422,
+              "paymentCancelled":402
+            },
+            "serverError": {
+              "internalServerError": 500
+            }
+          },
+        "routes": {
+            "sampleApiRoutePath": "/api/v1/sampleApi"
+        },
+        "errorMessages": {
+            "badRequest": {
+                "invalidInput": "input format is invalid",
+                "requestNotFound": "request Not Found"
+            },
+            "internalServerError": {
+                "serverError": "Internal Server Error!!"
+            },
+            "messages": {}
+        },
+        "successMessages": {
+            "messages": {
+                "sampleApiSuccess": "sample api got hitted successfully"
+            }
+        },
+        "loggerIdentifiers": {
+            "userControllers": "error occured on userController"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scaffold</title>
+    <style>
+      /* header */
+      header {
+        display: block;
+        background-color: white;
+        /* padding: 10px 20px; */
+        /* background-color: #f0ecec; */
+        color: white;
+              }
+      /* logo */
+      .logo {
+        margin-right: auto;
+        padding: 10px 20px;
+        display: inline-block;
+      }
+      /* date */
+      .date {
+       padding: 10px 20px;
+       display: inline-block;
+       float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img src="./logo/logo.svg" alt="logo" height="50"> -->
+        <img src="https://project1018-scaffold.s3.us-west-2.amazonaws.com/1682582465621frame.png" alt="Image" style="height:32; width:127;">
+        
+      </div>
+      <div class="date">
+        <p style="color: black; margin-top: 1px;"><%= new Date().toLocaleDateString() %></p>
+      </div>
+    </header>
+    <!-- rest of the page content goes here -->
+  </body>
+</html>
+

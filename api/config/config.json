@@ -1,0 +1,142 @@
+{
+    "name": "Configuration",
+    "project": "scaffold",
+    "settings": {
+        "apiVersion": "/api/V1",
+        "port": 4000,
+        "otpValidationInMinutes": 60,
+        "otpText": "otp for Scaffold: ",
+        "magicLinkRedirectLink":"http://localhost:3000/magicLink?data=",
+        "genericLinkRedirectLink":"http://localhost:3000/genericLink?key=",
+        "frontUrl": "http://localhost:3000",
+        "bcryptConfiguration": {
+            "saltRounds": 10
+        },
+        "JWT": {
+            "secretKey": "SCAFFOLD-SECRET-KEY-###9876547",
+            "expiration": "14d",
+            "saltForOtpEncryption": "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa",
+            "otpExpiration": "1h",
+            "teamExpiration": "7d",
+            "BearerToken": "Bearer "
+          },
+        "mailAuth": {
+            "service": "Gmail",
+            "authMail": "info.fuelassistant@gmail.com",
+            "authPassword": "scggoshackdjrkxr"
+        },
+        "cryptoAuth": {
+            "algorithm": "aes-256-cbc",
+            "secretKey": "$2a$10$vI8aWBnW_scaFFold##",
+            "initVector": "5183666c72eec9e4"
+        },
+        "spaceData": {
+            "noOfSpacesAllowedForCreation": 1,
+            "defaultMemberRole": "member"
+        },
+        "statusCode": {
+            "success": {
+              "ok": 200
+            },
+            "clientError": {
+              "badRequest": 400,
+              "unAuthorized": 401,
+              "NotFound": 404,
+              "tokenExpired": 419,
+              "Forbidden": 403,
+              "InValidInput": 422,
+              "paymentCancelled":402
+            },
+            "serverError": {
+              "internalServerError": 500
+            }
+          },
+        "routes": {
+            "validateEmail": "/api/v1/validateEmail",
+            "verifyEmailCode": "/api/v1/verifyEmailCode",
+            "tryWithDifferentMail": "/api/v1/tryWithDifferentMail",
+            "updateUserOnbording": "/api/v1/updateUserOnbording",
+            "forgotPasswordRequest": "/api/v1/forgotPasswordRequest",
+            "updatePassword": "/api/v1/updateForgotPassword",
+            "login": "/api/v1/login",
+            "loginWithMagicLinkRequest": "/api/v1/loginWithMagicLinkRequest",
+            "signInUsingMagicLink": "/api/v1/signInUsingMagicLink",
+            "updateUserDetails": "/api/v1/updateUserDetails",
+            "uploadUserProfileImage": "/api/v1/uploadUserProfileImage",
+            "changePassword": "/api/v1/changePassword",
+            "getImage": "/api/v1/getImage/:fileKey",
+            "changeEmailRequest": "/api/v1/changeEmailRequest",
+            "confirmChangeEmailRequest": "/api/v1/confirmChangeEmailRequest",
+            "createCompany": "/api/v1/createCompany",
+            "updateCompany": "/api/v1/updateCompany",
+            "fetchCompanyList": "/api/v1/fetchCompanyList",
+            "removeCompany": "/api/v1/removeCompany/:companyId",
+            "createContact": "/api/v1/createContact",
+            "removeContact": "/api/v1/removeContact/:contactId",
+            "refreshMagicLink": "/api/v1/refreshMagicLink",
+            "updateOnboardingForCreateSpace": "/api/v1/updateOnboardingForCreateSpace",
+            "createSpace": "/api/v1/createSpace",
+            "fetchSpaceDetailsById": "/api/v1/fetchSpaceDetails/:spaceId",
+            "inviteTeamMember": "/api/v1/inviteTeamMember",
+            "joinSpaceUsingInvitationLink": "/api/v1/joinSpaceUsingInvitationLink",
+            "fetchSpaceMemberList": "/api/v1/fetchSpaceMemberList", 
+            "acceptMultipleInvitations": "/api/v1/acceptMultipleInvitations",
+            "validateEmailFromInvitation": "/api/v1/validateEmailFromInvitation",
+            "revokeSpaceInvitation": "/api/v1/revokeSpaceInvitation/:memberId",
+            "resendInvitation": "/api/v1/resendInvitation/:memberId",
+            "toggleSpaceMemberAccess": "/api/v1/toggleSpaceMemberAccess",
+            "changeSpaceMemberRole": "/api/v1/changeSpaceMemberRole",
+            "refreshDashboard": "/api/v1/refreshDashboard",
+            "getCompanyDetails": "/api/v1/getCompanyDetails/:companyId",
+            "removeAssociationWithCompany": "/api/v1/removeAssociationWithCompany/:contactId",
+            "updateContact": "/api/v1/updateContact",
+            "fetchContactList": "/api/v1/fetchContactList",
+            "fetchNonAssociatedContactList": "/api/v1/fetchNonAssociatedContactList",
+            "associateMultipleContacts": "/api/v1/associateMultipleContacts"
+        },
+        "errorMessages": {
+            "badRequest": { 
+                "invalidInput": "input format is invalid",
+                "requestNotFound": "request Not Found",
+                "missingRequiredFields": "missing required fields",
+                "validationError": "invalid Email, please try with different email",
+                "userExists": "user already exists with this mail, please try with a different email",
+                "unVerifiedEmail": "email was not verified",
+                "unAuthorizedToken": "invalid Token",
+                "OTPTypeShouldBeString": "OTP type should be string",
+                "userNotFound": "user not found",
+                "passwordNotMatched": "wrong password",
+                "expiredMagicLink": "magic link got expired!",
+                "invalidPassword": "enterd password was invalid!",
+                "wrongPassword": "wrong existing password",
+                "emailExists": "enterd email was already exists! please try with different email",
+                "invalidPermission": "invalid permission to do this operation",
+                "OnReachMaxSpaces": "user was created the maximum number of spaces already",
+                "onboardingStepAlreadyCompleted": "this is not actual onboaring step",
+                "linkExpired": "this link was already used or expired",
+                "invalidRequest": "this request was not valid",
+                "existingPassword": "Existing password can not set as new password."
+            },
+            "internalServerError": {
+                "serverError": "Internal Server Error!!"
+
+            },
+            "messages": {}
+        },
+        "successMessages": {
+            "messages": {
+                "successApi": "api got success"
+            }
+        },
+        "loggerIdentifiers": {
+            "userControllers": "error occured on userController",
+            "companyControllers": "error occured on companyController",
+            "contactController": "error occured on contactController",
+            "teamController": "error occured on teamController",
+            "authentication": "error occured on authentication"
+        },
+        "otpEmailTemplates": ["otpVerification", "tryWithDifferentMail"],
+        "withoutOtpEmailTemplates": ["forgotPassword", "loginWithMagicLink", "changeEmailRequest", "inviteTeamMember"],
+        "spaceActions": ["spaceInvitation", "spaceMembersAccess", "companyAccess"]
+    }
+}
