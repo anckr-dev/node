@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Express API Starter
 
 Includes API Server utilities:
@@ -110,7 +109,3 @@ npm run auto-fix-format
 ````````````````````````````
 <your backendUrl> + /api-docs/
 ````````````````````````````
-=======
-# node
-This project contains node app codebase
->>>>>>> origin/main
